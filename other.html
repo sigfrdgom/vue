@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+<body>
+    <div id="app">
+    
+        <div class="container my-3 mx-5 border border-dark rounded">
+            <h3>{{ titulo }}</h3>
+        </div>
+
+        <div class="container my-3 mx-5 border border-dark rounded">
+            <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+            <button @click="agregarFruta">Agregar</button>
+        </div>
+
+        <div class="container my-3 mx-5 border border-dark rounded">
+            <ul>
+            <!-- Item iterativo con una interpolacion -->
+                <li v-for="item of arreglo">
+                    <input type="number" v-model.number="item.cantidad" style="width: 50px" min="0">
+                    Fruta: {{item.nombre}} -- {{item.cantidad}} Unidades
+                    <span v-if="item.cantidad === 0">Sin inventario</span>
+                </li>
+                
+            </ul>
+            <div>
+                    <h2>Total: {{sumarFrutas}}</h2>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Los scripts que usaremos VUE Y PROPIO -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="js/vue2.js" ></script>
+    
+</body>
+</html>
