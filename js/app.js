@@ -1,6 +1,6 @@
 var contenido = document.querySelector('#cuerpo-tabla');
 
-document.querySelector('#boton').addEventListener('click',ajax);
+document.querySelector('#boton').addEventListener('click',traer);
 // document.querySelector('#boton').addEventListener('click',traer);
 
 // Trae los datos del REST a traves de FETCH
