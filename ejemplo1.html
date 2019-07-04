@@ -13,43 +13,41 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <!-- VUE -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-
 </head>
 <body class="bg-secondary">
-    
+    <div id="app">
+        <navbar></navbar>
+        
+    </div>
     <div class="mx-5 mt-5">
-        <button class="btn btn-outline-info btn-block" id="boton" >Obtener registros</button>
-    </div>
-
-    <div id="datos" class="mx-5 mt-5 ">
-        <table class="table table-borderless table-striped table-hover bg-white">
-            <thead id="cabecera-tabla" class="thead-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDOS</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <tbody id="cuerpo-tabla">
-
-            </tbody>
-        </table>
-    </div>
+            <button class="btn btn-outline-info btn-block" id="boton" >Obtener registros</button>
+        </div>
+    
+        <div id="datos" class="mx-5 mt-5 ">
+            <table class="table table-borderless table-striped table-hover bg-white">
+                <thead id="cabecera-tabla" class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDOS</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+    
+                </tbody>
+            </table>
+        </div>
+    
 
     <script src="js/app.js" ></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script> 
+    <script>
+    const vm = new Vue({
+        el: '#app'
+    })
+    </script>
 </body>
 </html>

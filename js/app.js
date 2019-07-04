@@ -5,7 +5,7 @@ document.querySelector('#boton').addEventListener('click',traer);
 
 // Trae los datos del REST a traves de FETCH
 function traer() {
-    fetch('http://localhost/codeigniter/api/usuarios')
+    fetch('http://192.168.22.113/codeigniter/api/usuarios')
     .then(res => res.json())
     .then(datos => {
         fillTable(datos);
@@ -44,7 +44,7 @@ function actualizar(id) {
 // Trae los datos del REST a traves de AJAX
 function ajax() {
     var http = new XMLHttpRequest();
-    http.open('GET','http://localhost/codeigniter/api/usuarios',true);
+    http.open('GET','http://192.168.22.113/codeigniter/api/usuarios',true);
     http.send();
 
     http.onreadystatechange = function () {
@@ -55,6 +55,4 @@ function ajax() {
     }
 
 }
-// http://localhost/codeigniter/api/usuarios
-// http://localhost/codeigniter/
-// http://localhost/vue/
+

@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Input nombre
             nombre: '',
             apellido: '',
-          
             // Ver o no ver el formulario de actualizar
             formActualizar: false,
             // La posición de tu lista donde te gustaría actualizar 
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Input nombre dentro del formulario de actualizar
             nombreActualizar: '',
             apellidoActualizar: '',
-            
             // Lista de usuarios
             usuarios: [] ,
         },
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     id: + Math.floor(Math.random() * (10000 - 0)) + 0,
                     nombre: this.nombre,
                     apellido:this.apellido,
-                   
                 });
                 // Vaciamos el formulario de añadir
                 this.nombre = '';
@@ -39,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.formActualizar = true;
             },
             borrarUsuario: function (paciente_id) {
-                // Borramos de la lista
+                // Borramos del arreglo
                 this.usuarios.splice(paciente_id, 1);
             },
             guardarActualizacion: function (paciente_id) {
