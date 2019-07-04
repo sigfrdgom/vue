@@ -15,19 +15,8 @@ Vue.component('navbar',{
                     <li class="nav-item active">
                         <a class="nav-link" href="ejemplo3.html">Ejemplo 3</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="ejemplo4.html">Ejemplo 4</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="ejemplo5.html">Ejemplo 5</a>
-                    </li>
                 </ul>
             </nav>
         </div>
-    `,
-    data() {
-        return {
-            header: 'Hola desde vue'
-        }
-    },
+    `
 })
